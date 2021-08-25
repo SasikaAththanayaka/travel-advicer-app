@@ -4,7 +4,7 @@ import { useState } from 'react';
 import PlaceDetails from '../PlaceDetails/PlaceDetails';
 
 import useStyles from "./Style";
-function List() {
+function List({Places}) {
     const classes =useStyles();
     const [type,setType] =useState("restaurants");
     const [rating,setRating] =useState("");
