@@ -1,8 +1,11 @@
 import {Box,Typography,Button,Card,CardMedia,CardContent,CardActions,Chip} from "@material-ui/core"
 import {LocationOn,Phone,Rating} from '@material-ui/icons';
 import useStyle from "./Style";
-function PlaceDetails({place}) {
+function PlaceDetails({place,selected,refProp}) {
     const classes =useStyle();
+
+    if(selected) refProp?.current?.scrollIntoView({behavior:"smooth",block:"start"})
+
     return (
         <Card elevation={6}> 
             <CardMedia
